@@ -16,7 +16,6 @@ in {
         [ -f "/etc/shadow" ] && cp /etc/shadow ${pShadow}
         [ -f "${pShadow}" ] && cp ${pShadow} /etc/shadow
       '';
-
       users = {
         deps = ["etc_shadow"];
       };

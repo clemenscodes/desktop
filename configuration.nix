@@ -6,7 +6,6 @@
 }: {
   imports = [
     inputs.cymenixos.nixosModules.${system}.default
-    ./secrets.nix
   ];
   modules = {
     enable = true;

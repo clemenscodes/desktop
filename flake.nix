@@ -27,7 +27,10 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs nixpkgs system;};
-        modules = [./configuration.nix];
+        modules = [
+          ./configuration.nix
+          ./secrets.nix
+        ];
       };
       iso = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs nixpkgs system;};
