@@ -29,6 +29,7 @@
         specialArgs = {inherit self inputs nixpkgs system;};
         modules = [
           ./configuration.nix
+          ./hardware-configuration.nix
           ./secrets.nix
         ];
       };
