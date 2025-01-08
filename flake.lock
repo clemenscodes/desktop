@@ -1126,11 +1126,11 @@
         "xremap-flake": "xremap-flake"
       },
       "locked": {
-        "lastModified": 1736355297,
-        "narHash": "sha256-PyNbbp8+cxZGemv+IMPuMiqL/AZXLyknX7LXGGNseXc=",
+        "lastModified": 1736356317,
+        "narHash": "sha256-KNkae9bROtEYjdXVoFA0FueYmlugEtv8YvRxUj5AB2k=",
         "owner": "clemenscodes",
         "repo": "cymenixos",
-        "rev": "fff42f35274390ffca98a18114d14fbc4771da1a",
+        "rev": "4005fe1ea9d83540274d1a7bd089b4277bc2f0d2",
         "type": "github"
       },
       "original": {

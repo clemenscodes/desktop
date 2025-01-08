@@ -10,6 +10,17 @@
   inherit (cfg.boot.impermanence) persistPath;
   pShadow = "${persistPath}/etc/shadow";
 in {
+  system = {
+    activationScripts = {
+      etc_shadow = ''
+        [ -f "/etc/shadow" ] && cp /etc/shadow ${pShadow}
+        [ -f "${pShadow}" ] && cp ${pShadow} /etc/shadow
+      '';
+      users = {
+        deps = ["etc_shadow"];
+      };
+    };
+  };
   systemd = {
     services = {
       "etc_shadow_persistence" = {
@@ -36,6 +47,21 @@ in {
     users = {
       ${user} = {
         hashedPasswordFile = lib.mkIf cfg.security.sops.enable (config.sops.secrets.password.path);
+      };
+    };
+  };
+  networking = {
+    wireless = {
+      secretsFile = config.sops.secrets.wifi.path;
+      networks = {
+        "ext:home_uuid" = {
+          priority = 1;
+          pskRaw = "ext:home_psk";
+        };
+        "ext:alt_home_uuid" = {
+          priority = 2;
+          pskRaw = "ext:alt_home_psk";
+        };
       };
     };
   };
@@ -87,11 +113,11 @@ in {
               enable = true;
               gdrive = {
                 enable = true;
-                clientId = config.home-manager.users.${user}.sops.secrets."rclone/gdrive/clientId".path;
-                clientSecret = config.home-manager.users.${user}.sops.secrets."rclone/gdrive/clientSecret".path;
-                token = config.home-manager.users.${user}.sops.secrets."rclone/gdrive/token".path;
-                encryption_password = config.home-manager.users.${user}.sops.secrets."rclone/gdrive/password".path;
-                encryption_salt = config.home-manager.users.${user}.sops.secrets."rclone/gdrive/salt".path;
+                clientId = homeCfg.sops.secrets."rclone/gdrive/clientId".path;
+                clientSecret = homeCfg.sops.secrets."rclone/gdrive/clientSecret".path;
+                token = homeCfg.sops.secrets."rclone/gdrive/token".path;
+                encryption_password = homeCfg.sops.secrets."rclone/gdrive/password".path;
+                encryption_salt = homeCfg.sops.secrets."rclone/gdrive/salt".path;
               };
             };
           };
@@ -177,7 +203,7 @@ in {
         };
         nix = {
           extraOptions = ''
-            !include ${config.home-manager.users.${user}.sops.secrets.nix_access_tokens.path}
+            !include ${homeCfg.sops.secrets.nix_access_tokens.path}
           '';
         };
         sops = {
