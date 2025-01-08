@@ -7,6 +7,20 @@
   homeCfg = config.home-manager.users.${user};
   inherit (cfg.users) user;
 in {
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    secrets = {
+      password = {
+        neededForUsers = true;
+      };
+      wifi = {
+        neededForUsers = true;
+      };
+      mullvad = {
+        neededForUsers = true;
+      };
+    };
+  };
   modules = {
     security = {
       enable = true;
@@ -20,20 +34,6 @@ in {
         enable = true;
         mullvadAccountSecretPath = config.sops.secrets.mullvad.path;
         mullvadDns = true;
-      };
-    };
-  };
-  sops = {
-    defaultSopsFile = ./secrets/secrets.yaml;
-    secrets = {
-      password = {
-        neededForUsers = true;
-      };
-      wifi = {
-        neededForUsers = true;
-      };
-      mullvad = {
-        neededForUsers = true;
       };
     };
   };
@@ -61,7 +61,9 @@ in {
             };
           };
           organization = {
+            enable = true;
             email = {
+              enable = true;
               accounts = [
                 {
                   address = "horn_clemens@t-online.de";

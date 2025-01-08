@@ -28,7 +28,7 @@
     users = {
       enable = true;
       wheel = true;
-      user = "clemens";
+      user = "nixos";
     };
     boot = {
       enable = true;
