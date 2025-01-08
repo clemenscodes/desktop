@@ -53,6 +53,12 @@
         enable = true;
       };
     };
+    crypto = {
+      enable = true;
+      ledger-live = {
+        enable = true;
+      };
+    };
     display = {
       enable = true;
       gui = "wayland"; # or "headless"
@@ -215,12 +221,6 @@
               userEmail = "clemens.horn@mni.thm.de";
             };
           };
-          media = {
-            enable = true;
-            music = {
-              enable = true;
-            };
-          };
           display = {
             enable = true;
             bar = {
@@ -302,6 +302,66 @@
           };
           fonts = {
             enable = true;
+          };
+          media = {
+            enable = true;
+            audio = {
+              enable = true;
+              audacity = {
+                enable = true;
+              };
+              interfaces = {
+                enable = true;
+                scarlett = {
+                  enable = true;
+                  alsa-scarlett-gui = {
+                    enable = true;
+                  };
+                  scarlett2 = {
+                    enable = true;
+                  };
+                };
+              };
+            };
+            communication = {
+              enable = true;
+              discord = {
+                enable = true;
+              };
+              element = {
+                enable = true;
+              };
+            };
+            music = {
+              enable = true;
+              dlplaylist = {
+                enable = true;
+              };
+              ncmpcpp = {
+                enable = true;
+              };
+            };
+            editing = {
+              enable = true;
+              davinci = {
+                enable = true;
+              };
+              gstreamer = {
+                enable = true;
+              };
+            };
+            video = {
+              enable = true;
+              mpris = {
+                enable = true;
+              };
+              mpv = {
+                enable = true;
+              };
+              obs = {
+                enable = true;
+              };
+            };
           };
           monitoring = {
             enable = true;
