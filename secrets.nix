@@ -1,12 +1,56 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: let
   cfg = config.modules;
   homeCfg = config.home-manager.users.${user};
   inherit (cfg.users) user;
+  inherit (cfg.boot.impermanence) persistPath;
+  pShadow = "${persistPath}/etc/shadow";
 in {
+  system = {
+    activationScripts = {
+      etc_shadow = ''
+        [ -f "/etc/shadow" ] && cp /etc/shadow ${pShadow}
+        [ -f "${pShadow}" ] && cp ${pShadow} /etc/shadow
+      '';
+
+      users = {
+        deps = ["etc_shadow"];
+      };
+    };
+  };
+  systemd = {
+    services = {
+      "etc_shadow_persistence" = {
+        enable = true;
+        description = "Persist /etc/shadow on shutdown.";
+        wantedBy = ["multi-user.target"];
+        path = [pkgs.util-linux];
+        unitConfig = {
+          defaultDependencies = true;
+        };
+        serviceConfig = {
+          Type = "oneshot";
+          RemainAfterExit = true;
+          ExecStop = pkgs.writeShellScript "persist_etc_shadow" ''
+            mkdir --parents "${persistPath}/etc"
+            cp /etc/shadow ${pShadow}
+          '';
+        };
+      };
+    };
+  };
+  users = {
+    mutableUsers = false;
+    users = {
+      ${user} = {
+        hashedPasswordFile = lib.mkIf cfg.security.sops.enable (config.sops.secrets.password.path);
+      };
+    };
+  };
   sops = {
     defaultSopsFile = ./secrets/secrets.yaml;
     secrets = {
@@ -22,6 +66,9 @@ in {
     };
   };
   modules = {
+    users = {
+      initialHashedPassword = null;
+    };
     security = {
       enable = true;
       sops = {
