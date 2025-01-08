@@ -10,17 +10,6 @@
   inherit (cfg.boot.impermanence) persistPath;
   pShadow = "${persistPath}/etc/shadow";
 in {
-  system = {
-    activationScripts = {
-      etc_shadow = ''
-        [ -f "/etc/shadow" ] && cp /etc/shadow ${pShadow}
-        [ -f "${pShadow}" ] && cp ${pShadow} /etc/shadow
-      '';
-      users = {
-        deps = ["etc_shadow"];
-      };
-    };
-  };
   systemd = {
     services = {
       "etc_shadow_persistence" = {
