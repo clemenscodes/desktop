@@ -190,6 +190,18 @@
     xdg = {
       enable = true;
     };
+    gaming = {
+      enable = true;
+      steam = {
+        enable = true;
+      };
+      gamescope = {
+        enable = true;
+      };
+      gamemode = {
+        enable = true;
+      };
+    };
   };
   home-manager = {
     users = {
