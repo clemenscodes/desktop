@@ -31,7 +31,9 @@
     };
     boot = {
       enable = true;
+      biosSupport = true;
       efiSupport = true;
+      libreboot = false;
       inherit (config.modules.disk) device;
       hibernation = true;
       swapResumeOffset = 533760;
@@ -179,6 +181,9 @@
         flavor = "macchiato";
         accent = "blue";
       };
+    };
+    performance = {
+      enable = true;
     };
     time = {
       enable = true;
