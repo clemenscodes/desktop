@@ -122,6 +122,9 @@
     };
     security = {
       enable = true;
+      diceware = {
+        enable = true;
+      };
       gnome-keyring = {
         enable = true;
       };
@@ -145,6 +148,9 @@
         noPassword = true;
       };
       tpm = {
+        enable = true;
+      };
+      yubikey = {
         enable = true;
       };
     };
