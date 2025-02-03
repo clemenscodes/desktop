@@ -461,6 +461,12 @@
             nix-prefetch-github = {
               enable = true;
             };
+            lsusb = {
+              enable = true;
+            };
+            wget = {
+              enable = true;
+            };
             ripgrep = {
               enable = true;
             };
