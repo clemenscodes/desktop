@@ -145,13 +145,19 @@
       };
       sudo = {
         enable = true;
-        noPassword = true;
+        noPassword = false;
       };
       tpm = {
         enable = true;
       };
       yubikey = {
         enable = true;
+        pam = {
+          enable = true;
+          u2f-mappings = [
+            "BIy34cqfJbjqbGflC1sK064geZZm9ma8PEcv+lNyBcy9PPQuJx1jlYTfx6wBdtyST4a493/hy/bCvjtygHM8cg==,zvs4JcxffM814ItVLiVmNoMAL7rf1W/ZxLFbA9xkf1CEWiHI7LGdQVIp4NiOzTHMZFUobJwN4emnmGcrR3zKGg==,es256,+presence"
+          ];
+        };
       };
     };
     shell = {
