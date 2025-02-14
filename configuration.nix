@@ -159,8 +159,8 @@
             matcha = 31861924;
           };
           token-ids = [
-            "cccccbudlijr" # sequwitie
-            "cccccbuhdrlf" # matcha
+            "vvcccbudlijr" # sequwitie
+            "vvcccbuhdrlf" # matcha
           ];
           u2f-mappings = [
             "BIy34cqfJbjqbGflC1sK064geZZm9ma8PEcv+lNyBcy9PPQuJx1jlYTfx6wBdtyST4a493/hy/bCvjtygHM8cg==,zvs4JcxffM814ItVLiVmNoMAL7rf1W/ZxLFbA9xkf1CEWiHI7LGdQVIp4NiOzTHMZFUobJwN4emnmGcrR3zKGg==,es256,+presence" # sequwitie
