@@ -167,13 +167,6 @@ in {
           };
         };
         programs = {
-          git = {
-            extraConfig = {
-              user = {
-                signingkey = "01ED7669DB04B4BA313836570D0598D32587F438";
-              };
-            };
-          };
           zsh = {
             initExtra = let
               gh_token =

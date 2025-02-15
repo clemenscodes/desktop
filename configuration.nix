@@ -254,6 +254,10 @@
               enable = true;
               userName = "Clemens Horn";
               userEmail = "clemens.horn@mni.thm.de";
+              signing = {
+                enable = true;
+                gpgFingerprint = "E2EBFDB91B70DC0615E928013EEB9BF1A5F112F1";
+              };
             };
           };
           display = {
