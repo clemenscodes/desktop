@@ -365,6 +365,12 @@
                 };
               };
             };
+            rss = {
+              enable = true;
+              newsboat = {
+                enable = true;
+              };
+            };
             communication = {
               enable = true;
               discord = {
@@ -384,7 +390,7 @@
               };
             };
             editing = {
-              enable = true;
+              enable = false;
               davinci = {
                 enable = true;
               };
@@ -417,7 +423,7 @@
           organization = {
             enable = true;
             libreoffice = {
-              enable = false;
+              enable = true;
             };
           };
           networking = {
