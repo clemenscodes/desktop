@@ -9,7 +9,7 @@
     enable = true;
     disk = {
       enable = true;
-      device = "/dev/sda";
+      device = "/dev/sdb";
       swapsize = 64;
     };
     machine = {
@@ -423,6 +423,9 @@
           organization = {
             enable = true;
             libreoffice = {
+              enable = true;
+            };
+            zotero = {
               enable = true;
             };
           };

@@ -92,7 +92,7 @@ in {
     networking = {
       enable = true;
       torrent = {
-        enable = false;
+        enable = true;
         mullvadAccountSecretPath = config.sops.secrets.mullvad.path;
         mullvadDns = true;
       };
