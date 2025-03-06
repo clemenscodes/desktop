@@ -225,6 +225,15 @@
       gamemode = {
         enable = true;
       };
+      battlenet = {
+        enable = true;
+      };
+      lutris = {
+        enable = true;
+      };
+      umu = {
+        enable = true;
+      };
     };
   };
   home-manager = {
