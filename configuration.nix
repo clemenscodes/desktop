@@ -227,6 +227,9 @@
       };
       battlenet = {
         enable = true;
+        warcraft = {
+          enable = true;
+        };
       };
       lutris = {
         enable = true;
