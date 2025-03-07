@@ -1116,11 +1116,11 @@
         "yubikey-guide": "yubikey-guide"
       },
       "locked": {
-        "lastModified": 1741343629,
-        "narHash": "sha256-mKFSHTqwEjZBNkzNSM+RNHbyfVXXC/kPIOPpeSi9Y5k=",
+        "lastModified": 1741343782,
+        "narHash": "sha256-MXafEIjtOgu6fyHGmIObp4IiQhmEgAngjpTu+9eq288=",
         "owner": "clemenscodes",
         "repo": "cymenixos",
-        "rev": "3348cc9ceb5de214601cc49fe2835ea5f9be8cfa",
+        "rev": "f577e84097bedf110a51af6c65dd521190787cee",
         "type": "github"
       },
       "original": {
