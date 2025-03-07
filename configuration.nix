@@ -244,6 +244,9 @@
           browser = {
             enable = true;
             defaultBrowser = "brave";
+            firefox = {
+              enable = true;
+            };
             chromium = {
               enable = true;
             };

@@ -1,10 +1,7 @@
 {
   inputs = {
-    # nixpkgs = {
-    #   url = "github:NixOS/nixpkgs/nixos-unstable";
-    # };
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/master";
+      url = "github:NixOS/nixpkgs/nixos-unstable";
     };
     cymenixos = {
       url = "github:clemenscodes/cymenixos";

@@ -1116,11 +1116,11 @@
         "yubikey-guide": "yubikey-guide"
       },
       "locked": {
-        "lastModified": 1741281342,
-        "narHash": "sha256-b6YmRBKy2v+cqKDp7ioQhPkJWnXIsUdjYmnC3zHUlO4=",
+        "lastModified": 1741343629,
+        "narHash": "sha256-mKFSHTqwEjZBNkzNSM+RNHbyfVXXC/kPIOPpeSi9Y5k=",
         "owner": "clemenscodes",
         "repo": "cymenixos",
-        "rev": "d3f8992ae56f22052ff64e205b654b0c2654fde2",
+        "rev": "3348cc9ceb5de214601cc49fe2835ea5f9be8cfa",
         "type": "github"
       },
       "original": {
@@ -5982,16 +5982,16 @@
     },
     "nixpkgs_27": {
       "locked": {
-        "lastModified": 1741280662,
-        "narHash": "sha256-hM5r/MZOCiOPZJXlI/hFIb0pdDlc5N2yXEIvUZWKxk0=",
+        "lastModified": 1741246872,
+        "narHash": "sha256-Q6pMP4a9ed636qilcYX8XUguvKl/0/LGXhHcRI91p0U=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c8b53289d49f9f4c0b5cbbeca4c779d63ea51863",
+        "rev": "10069ef4cf863633f57238f179a0297de84bd8d3",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "master",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
