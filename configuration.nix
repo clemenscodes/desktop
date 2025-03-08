@@ -100,6 +100,9 @@
       xremap = {
         enable = true;
       };
+      ydotool = {
+        enable = true;
+      };
     };
     locale = {
       enable = true;
