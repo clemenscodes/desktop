@@ -1116,11 +1116,11 @@
         "yubikey-guide": "yubikey-guide"
       },
       "locked": {
-        "lastModified": 1741459195,
-        "narHash": "sha256-nhBZFD8eQMm1fm1HFZQELvu/RekKgEgXfJEXiKqgl40=",
+        "lastModified": 1741523985,
+        "narHash": "sha256-LbwJ2QlBRqmoQUFxWff9KU7hC4C6lWa7RNvJc0Iwwuw=",
         "owner": "clemenscodes",
         "repo": "cymenixos",
-        "rev": "a39581194a1ef617b6242600ea2a5e977eb37c09",
+        "rev": "11f42d7b4620baee693d379a4f3dbf9858e40232",
         "type": "github"
       },
       "original": {
@@ -5982,11 +5982,11 @@
     },
     "nixpkgs_27": {
       "locked": {
-        "lastModified": 1741246872,
-        "narHash": "sha256-Q6pMP4a9ed636qilcYX8XUguvKl/0/LGXhHcRI91p0U=",
+        "lastModified": 1741379970,
+        "narHash": "sha256-Wh7esNh7G24qYleLvgOSY/7HlDUzWaL/n4qzlBePpiw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "10069ef4cf863633f57238f179a0297de84bd8d3",
+        "rev": "36fd87baa9083f34f7f5027900b62ee6d09b1f2f",
         "type": "github"
       },
       "original": {

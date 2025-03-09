@@ -91,6 +91,9 @@
       printing = {
         enable = true;
       };
+      input-remapper = {
+        enable = true;
+      };
       sound = {
         enable = true;
       };
