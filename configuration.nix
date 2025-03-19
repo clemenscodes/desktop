@@ -200,6 +200,9 @@
       };
       virt-manager = {
         enable = true;
+        windows = {
+          enable = true;
+        };
       };
     };
     themes = {
@@ -523,6 +526,9 @@
               enable = true;
             };
             wget = {
+              enable = true;
+            };
+            gparted = {
               enable = true;
             };
             ripgrep = {
