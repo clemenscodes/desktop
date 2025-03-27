@@ -2,6 +2,7 @@
   inputs,
   config,
   system,
+  lib,
   ...
 }: {
   imports = [inputs.cymenixos.nixosModules.${system}.default];
@@ -235,19 +236,19 @@
         enable = true;
       };
       gamemode = {
-        enable = true;
-      };
-      battlenet = {
-        enable = true;
-        warcraft = {
-          enable = true;
-        };
+        enable = lib.mkForce false;
       };
       lutris = {
         enable = true;
       };
       umu = {
         enable = true;
+      };
+      w3champions = {
+        enable = true;
+        warcraft = {
+          enable = true;
+        };
       };
     };
   };
