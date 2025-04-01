@@ -56,6 +56,12 @@
         enable = true;
       };
     };
+    databases = {
+      enable = true;
+      mongodb = {
+        enable = true;
+      };
+    };
     crypto = {
       enable = true;
       ledger-live = {
@@ -289,6 +295,9 @@
                 enable = true;
                 gpgFingerprint = "52E30A92E24B09D5";
               };
+            };
+            tongo = {
+              enable = true;
             };
           };
           display = {
