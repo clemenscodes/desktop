@@ -1144,11 +1144,11 @@
         "yubikey-guide": "yubikey-guide"
       },
       "locked": {
-        "lastModified": 1743924031,
-        "narHash": "sha256-rQPR63ZxW/OFMqs0aySIJ/fuT2Apd4fccf/JHgWRWYY=",
+        "lastModified": 1743949025,
+        "narHash": "sha256-aZB4t2C2Ijy8iOIZkgFBqFQAaAf0oGPmiZ/0/RQSG0M=",
         "owner": "clemenscodes",
         "repo": "cymenixos",
-        "rev": "ecf5c195f8e4d8187fce5b1e17f982df9f32c20f",
+        "rev": "f4dc3eef372b96ead403004e439244fe0c6594c2",
         "type": "github"
       },
       "original": {
@@ -1164,11 +1164,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1743923990,
-        "narHash": "sha256-/wNWQKF2e3yyrVLuTBc9DvB8isIfm127v7wzBKyG8wA=",
+        "lastModified": 1743926139,
+        "narHash": "sha256-6S4oWc4ZSeRiQaSZEIFH3i1VyIU5LIFFfah5NuVhzuw=",
         "owner": "clemenscodes",
         "repo": "cymenixvim",
-        "rev": "1c911752dfcb394a1ff2f9a0c5fa7330d155b339",
+        "rev": "3134727de3264df2a00b8a00cac1a60e2eff07f7",
         "type": "github"
       },
       "original": {
@@ -6162,11 +6162,11 @@
     },
     "nixpkgs_29": {
       "locked": {
-        "lastModified": 1743315132,
-        "narHash": "sha256-6hl6L/tRnwubHcA4pfUUtk542wn2Om+D4UnDhlDW9BE=",
+        "lastModified": 1743827369,
+        "narHash": "sha256-rpqepOZ8Eo1zg+KJeWoq1HAOgoMCDloqv5r2EAa9TSA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "52faf482a3889b7619003c0daec593a1912fddc1",
+        "rev": "42a1c966be226125b48c384171c44c651c236c22",
         "type": "github"
       },
       "original": {

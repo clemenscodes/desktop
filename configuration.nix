@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [inputs.cymenixos.nixosModules.${system}.default];
+  networking.firewall.enable = lib.mkForce false;
   modules = {
     enable = true;
     disk = {
@@ -102,7 +103,7 @@
     io = {
       enable = true;
       printing = {
-        enable = true;
+        enable = false;
       };
       input-remapper = {
         enable = true;
@@ -133,7 +134,7 @@
         enable = true;
       };
       firewall = {
-        enable = true;
+        enable = false;
       };
       stevenblack = {
         enable = true;
