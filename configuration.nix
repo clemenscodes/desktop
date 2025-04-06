@@ -77,6 +77,9 @@
       hyprland = {
         enable = true;
       };
+      plasma = {
+        enable = false;
+      };
       qt = {
         enable = true;
       };
@@ -206,7 +209,7 @@
     virtualisation = {
       enable = true;
       docker = {
-        enable = true;
+        enable = false;
       };
       virt-manager = {
         enable = true;

@@ -87,7 +87,6 @@ in {
       };
     };
     networking = {
-      enable = true;
       torrent = {
         enable = true;
         mullvadAccountSecretPath = config.sops.secrets.mullvad.path;
