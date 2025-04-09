@@ -246,7 +246,10 @@
         enable = true;
       };
       gamemode = {
-        enable = lib.mkForce false;
+        enable = true;
+      };
+      mangohud = {
+        enable = true;
       };
       lutris = {
         enable = true;
@@ -431,7 +434,7 @@
               };
             };
             editing = {
-              enable = false;
+              enable = true;
               davinci = {
                 enable = true;
               };
