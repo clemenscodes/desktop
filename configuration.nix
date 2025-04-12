@@ -251,6 +251,9 @@
       mangohud = {
         enable = true;
       };
+      nexusmods = {
+        enable = true;
+      };
       lutris = {
         enable = true;
       };
