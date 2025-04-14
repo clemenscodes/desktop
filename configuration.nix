@@ -262,9 +262,6 @@
       };
       w3champions = {
         enable = true;
-        warcraft = {
-          enable = true;
-        };
       };
     };
   };
