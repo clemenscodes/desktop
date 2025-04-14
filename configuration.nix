@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [inputs.cymenixos.nixosModules.${system}.default];
-  networking.firewall.enable = lib.mkForce false;
   modules = {
     enable = true;
     disk = {
