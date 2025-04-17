@@ -261,6 +261,9 @@
       };
       w3champions = {
         enable = true;
+        flo = {
+          enable = true;
+        };
       };
     };
   };
@@ -281,6 +284,9 @@
           };
           development = {
             enable = true;
+            cargo = {
+              enable = true;
+            };
             direnv = {
               enable = true;
             };
