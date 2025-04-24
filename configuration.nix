@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   config,
   system,
   lib,
@@ -59,7 +60,7 @@
     databases = {
       enable = true;
       mongodb = {
-        enable = true;
+        enable = false;
       };
     };
     crypto = {
@@ -251,7 +252,7 @@
         enable = true;
       };
       nexusmods = {
-        enable = true;
+        enable = false;
       };
       lutris = {
         enable = true;
@@ -441,7 +442,7 @@
             editing = {
               enable = true;
               davinci = {
-                enable = true;
+                enable = false;
               };
               gstreamer = {
                 enable = true;
