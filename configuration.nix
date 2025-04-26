@@ -11,7 +11,7 @@
     enable = true;
     disk = {
       enable = true;
-      device = "/dev/sdb";
+      device = "/dev/sda";
       swapsize = 64;
     };
     machine = {
@@ -258,7 +258,7 @@
         enable = true;
       };
       umu = {
-        enable = true;
+        enable = false;
       };
       w3champions = {
         enable = true;
