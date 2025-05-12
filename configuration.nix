@@ -145,9 +145,6 @@
     };
     security = {
       enable = true;
-      diceware = {
-        enable = true;
-      };
       gnome-keyring = {
         enable = true;
       };
@@ -209,8 +206,8 @@
     };
     virtualisation = {
       enable = true;
-      docker = {
-        enable = false;
+      podman = {
+        enable = true;
       };
       virt-manager = {
         enable = true;
@@ -262,9 +259,6 @@
       };
       w3champions = {
         enable = true;
-        flo = {
-          enable = true;
-        };
       };
     };
   };
@@ -423,6 +417,9 @@
             };
             communication = {
               enable = true;
+              teams = {
+                enable = true;
+              };
               discord = {
                 enable = true;
               };
