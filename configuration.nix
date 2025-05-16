@@ -103,7 +103,7 @@
     io = {
       enable = true;
       printing = {
-        enable = false;
+        enable = true;
       };
       input-remapper = {
         enable = true;
