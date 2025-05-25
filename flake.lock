@@ -1140,11 +1140,11 @@
         "yubikey-guide": "yubikey-guide"
       },
       "locked": {
-        "lastModified": 1748165583,
-        "narHash": "sha256-rdJIdyD8L/vlPu0ZoqUj2AHXqVAjtpMd9P/4QAth6e0=",
+        "lastModified": 1748177315,
+        "narHash": "sha256-Ls9QNOWV7/xBNekD8UGTTDmzxCpf0CHR/RjFYMWuaCo=",
         "owner": "clemenscodes",
         "repo": "cymenixos",
-        "rev": "023409c41b66f6622578ed8a4f4c2899146727ab",
+        "rev": "5a4de70204abda37eaa64cd9f9ea9ff046c39be5",
         "type": "github"
       },
       "original": {
@@ -1160,11 +1160,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1748165469,
-        "narHash": "sha256-c6JaWWq+I+CL76WXbjHZ8kBQAAGGqOLFB44tUPnOdKI=",
+        "lastModified": 1748177287,
+        "narHash": "sha256-WaGstks46yPE8XjoXyN4Kkb8CJgjKVDQO48JaJSeyIY=",
         "owner": "clemenscodes",
         "repo": "cymenixvim",
-        "rev": "946fd6efacb23488375bcf6a5acd38cad0b8c680",
+        "rev": "24d8c0d25795aeae87cfb490b2b4c47d0ff1982f",
         "type": "github"
       },
       "original": {
@@ -6366,11 +6366,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1748165185,
-        "narHash": "sha256-3WCJBId6pC3JGpjW93yo5kKjb8VVrqgWSx5aCQf7fqM=",
+        "lastModified": 1748173519,
+        "narHash": "sha256-lFeGoidhN/GTnW05VrXGZlTOAepPRnrYIx1YFU0MtUs=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "65968ead3694fd01a9f0ed9e9027de67273d0b53",
+        "rev": "b47c95c381aafc0efe28a8d9638cec546654384f",
         "type": "github"
       },
       "original": {
