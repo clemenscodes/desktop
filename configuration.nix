@@ -1,9 +1,7 @@
 {
   inputs,
-  pkgs,
   config,
   system,
-  lib,
   ...
 }: {
   imports = [inputs.cymenixos.nixosModules.${system}.default];
@@ -90,8 +88,8 @@
     };
     fonts = {
       enable = true;
-      defaultFont = "VictorMono Nerd Font";
-      size = 8;
+      defaultFont = "Iosevka Nerd Font";
+      size = 12;
     };
     home-manager = {
       enable = true;
@@ -301,6 +299,9 @@
               signing = {
                 enable = true;
                 gpgFingerprint = "52E30A92E24B09D5";
+              };
+              lazygit = {
+                enable = true;
               };
             };
             tongo = {
