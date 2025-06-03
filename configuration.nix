@@ -89,7 +89,7 @@
     fonts = {
       enable = true;
       defaultFont = "Iosevka Nerd Font";
-      size = 12;
+      size = 11;
     };
     home-manager = {
       enable = true;
@@ -301,6 +301,12 @@
                 gpgFingerprint = "52E30A92E24B09D5";
               };
               lazygit = {
+                enable = true;
+              };
+            };
+            reversing = {
+              enable = true;
+              pince = {
                 enable = true;
               };
             };
