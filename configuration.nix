@@ -304,12 +304,6 @@
                 enable = true;
               };
             };
-            reversing = {
-              enable = true;
-              pince = {
-                enable = true;
-              };
-            };
             tongo = {
               enable = true;
             };
