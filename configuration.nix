@@ -5,6 +5,12 @@
   ...
 }: {
   imports = [inputs.cymenixos.nixosModules.${system}.default];
+  services = {
+    miniupnpd = {
+      externalInterface = "wlp0s20f0u3u1u1";
+      internalIPs = ["wlp0s20f0u3u1u1"];
+    };
+  };
   modules = {
     enable = true;
     disk = {
@@ -234,6 +240,12 @@
     };
     gaming = {
       enable = true;
+      emulation = {
+        enable = true;
+        rpcs3 = {
+          enable = true;
+        };
+      };
       steam = {
         enable = true;
       };
@@ -297,7 +309,7 @@
               userName = "Clemens Horn";
               userEmail = "clemens.horn@mni.thm.de";
               signing = {
-                enable = true;
+                enable = false;
                 gpgFingerprint = "52E30A92E24B09D5";
               };
               lazygit = {

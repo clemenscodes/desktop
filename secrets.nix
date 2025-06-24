@@ -217,6 +217,7 @@ in {
             nix_access_tokens = {};
             thmvpnuser = {};
             thmvpnpass = {};
+            rpcn = {};
             "rclone/gdrive/clientId" = {};
             "rclone/gdrive/clientSecret" = {};
             "rclone/gdrive/token" = {};
