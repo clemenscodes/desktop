@@ -279,7 +279,7 @@
           enable = true;
           browser = {
             enable = true;
-            defaultBrowser = "brave";
+            defaultBrowser = "firefox";
             firefox = {
               enable = true;
             };
