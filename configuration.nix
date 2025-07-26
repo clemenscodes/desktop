@@ -69,7 +69,7 @@
         };
       };
       nvidia = {
-        enable = true;
+        enable = false;
       };
     };
     databases = {
@@ -282,7 +282,7 @@
         enable = false;
       };
       w3champions = {
-        enable = true;
+        enable = false;
       };
     };
   };
@@ -466,7 +466,7 @@
             editing = {
               enable = true;
               davinci = {
-                enable = false;
+                enable = true;
               };
               gstreamer = {
                 enable = true;
