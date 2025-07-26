@@ -61,6 +61,12 @@
       enable = true;
       amd = {
         enable = true;
+        corectrl = {
+          enable = true;
+        };
+        lact = {
+          enable = true;
+        };
       };
       nvidia = {
         enable = true;
