@@ -6,17 +6,19 @@
 }: {
   imports = [inputs.cymenixos.nixosModules.${system}.default];
   services = {
-    miniupnpd = {
-      externalInterface = "wlp0s20f0u3u1u1";
-      internalIPs = ["wlp0s20f0u3u1u1"];
+    miniupnpd = let
+      interface = "wlp16s0u2";
+    in {
+      externalInterface = interface;
+      internalIPs = [interface];
     };
   };
   modules = {
     enable = true;
     disk = {
       enable = true;
-      device = "/dev/sda";
-      swapsize = 64;
+      device = "/dev/nvme0n1";
+      swapsize = 96;
     };
     machine = {
       kind = "desktop";
@@ -247,6 +249,9 @@
         };
       };
       steam = {
+        enable = true;
+      };
+      lossless = {
         enable = true;
       };
       gamescope = {
