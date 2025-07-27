@@ -69,7 +69,7 @@
         };
       };
       nvidia = {
-        enable = false;
+        enable = true;
       };
     };
     databases = {
@@ -101,6 +101,15 @@
       };
       sddm = {
         enable = true;
+      };
+      vnc = {
+        enable = true;
+        wayvnc = {
+          enable = true;
+        };
+        tigervnc = {
+          enable = true;
+        };
       };
     };
     fonts = {
@@ -258,9 +267,6 @@
         };
       };
       steam = {
-        enable = true;
-      };
-      lossless = {
         enable = true;
       };
       gamescope = {
