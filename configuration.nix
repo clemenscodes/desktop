@@ -7,7 +7,7 @@
   imports = [inputs.cymenixos.nixosModules.${system}.default];
   services = {
     miniupnpd = let
-      interface = "wlp17s0u4";
+      interface = "wlp17s0u2";
     in {
       externalInterface = interface;
       internalIPs = [interface];
@@ -101,15 +101,6 @@
       };
       sddm = {
         enable = true;
-      };
-      vnc = {
-        enable = true;
-        wayvnc = {
-          enable = true;
-        };
-        tigervnc = {
-          enable = true;
-        };
       };
     };
     fonts = {
@@ -404,6 +395,15 @@
             screenshots = {
               enable = true;
             };
+            vnc = {
+              enable = true;
+              wayvnc = {
+                enable = true;
+              };
+              tigervnc = {
+                enable = true;
+              };
+            };
           };
           editor = {
             enable = true;
@@ -427,7 +427,7 @@
             audio = {
               enable = true;
               audacity = {
-                enable = true;
+                enable = false;
               };
               interfaces = {
                 enable = true;
@@ -466,7 +466,7 @@
                 enable = true;
               };
               ncmpcpp = {
-                enable = true;
+                enable = false;
               };
             };
             editing = {
