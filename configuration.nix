@@ -7,7 +7,7 @@
   imports = [inputs.cymenixos.nixosModules.${system}.default];
   services = {
     miniupnpd = let
-      interface = "wlp17s0u2";
+      interface = "wlp17s0u4";
     in {
       externalInterface = interface;
       internalIPs = [interface];
@@ -67,9 +67,6 @@
         lact = {
           enable = true;
         };
-      };
-      nvidia = {
-        enable = true;
       };
     };
     databases = {
@@ -253,6 +250,9 @@
       enable = true;
       emulation = {
         enable = true;
+        pcsx2 = {
+          enable = true;
+        };
         rpcs3 = {
           enable = true;
         };
