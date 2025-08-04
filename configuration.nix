@@ -7,7 +7,7 @@
   imports = [inputs.cymenixos.nixosModules.${system}.default];
   services = {
     miniupnpd = let
-      interface = "wlp17s0u4";
+      interface = "wlp8s0";
     in {
       externalInterface = interface;
       internalIPs = [interface];
@@ -218,7 +218,7 @@
     };
     virtualisation = {
       enable = true;
-      podman = {
+      docker = {
         enable = true;
       };
       virt-manager = {
@@ -290,7 +290,7 @@
           enable = true;
           browser = {
             enable = true;
-            defaultBrowser = "firefox";
+            defaultBrowser = "brave";
             firefox = {
               enable = true;
             };

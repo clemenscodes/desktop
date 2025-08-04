@@ -28,6 +28,9 @@ in {
         description = "Persist /etc/shadow on shutdown.";
         wantedBy = ["multi-user.target"];
         path = [pkgs.util-linux];
+        unitConfig = {
+          defaultDependencies = true;
+        };
         serviceConfig = {
           Type = "oneshot";
           RemainAfterExit = true;
@@ -97,6 +100,29 @@ in {
   home-manager = {
     users = {
       ${user} = {
+        accounts = {
+          email = {
+            accounts = {
+              "clemens.horn@nexobility.de" = {
+                smtp = {
+                  tls = {
+                    useStartTls = true;
+                  };
+                };
+              };
+            };
+          };
+        };
+        home = {
+          sessionVariables = {
+            KUBECONFIG = "${homeCfg.sops.secrets.kubeconfig.path}";
+          };
+          file = {
+            ".ssh/id_rsa_nexobility.pub" = {
+              source = homeCfg.lib.file.mkOutOfStoreSymlink "${homeCfg.sops.secrets."nexobility/ssh_public".path}";
+            };
+          };
+        };
         modules = {
           security = {
             sops = {
@@ -127,7 +153,7 @@ in {
               accounts = [
                 {
                   address = "horn_clemens@t-online.de";
-                  primary = true;
+                  primary = false;
                   realName = "Clemens Horn";
                   userName = "horn_clemens@t-online.de";
                   smtpHost = "securesmtp.t-online.de";
@@ -157,6 +183,17 @@ in {
                   imapHost = "mailgate.thm.de";
                   imapPort = 993;
                   secretName = "email/clemens.horn@mni.thm.de/password";
+                }
+                {
+                  address = "clemens.horn@nexobility.de";
+                  primary = true;
+                  realName = "Clemens Horn";
+                  userName = "clemens.horn@nexobility.de";
+                  smtpHost = "smtp.office365.com";
+                  smtpPort = 587;
+                  imapHost = "outlook.office365.com";
+                  imapPort = 993;
+                  secretName = "email/clemens.horn@nexobility.de/password";
                 }
               ];
             };
@@ -189,6 +226,22 @@ in {
                   fi
                 ''
                 else "";
+              azure_pat =
+                if cfg.security.sops.enable
+                then ''
+                  if [[ -o interactive ]]; then
+                    export AZURE_DEVOPS_EXT_PAT=$(<${homeCfg.sops.secrets.azure_pat.path})
+                  fi
+                ''
+                else "";
+              open_api =
+                if cfg.security.sops.enable
+                then ''
+                  if [[ -o interactive ]]; then
+                    export OPENAI_API_KEY=$(<${homeCfg.sops.secrets.open_api_key.path})
+                  fi
+                ''
+                else "";
             in
               /*
               bash
@@ -197,6 +250,8 @@ in {
                 ${builtins.toString gh_token}
                 ${builtins.toString hetzner_token}
                 ${builtins.toString cachix_auth_token}
+                ${builtins.toString azure_pat}
+                ${builtins.toString open_api}
               '';
           };
         };
@@ -208,6 +263,7 @@ in {
         sops = {
           defaultSopsFile = ./secrets/secrets.yaml;
           secrets = {
+            "email/clemens.horn@nexobility.de/password" = {};
             "email/clemens.horn@mni.thm.de/password" = {};
             "email/horn_clemens@t-online.de/password" = {};
             "email/me@clemenshorn.com/password" = {};
@@ -223,6 +279,14 @@ in {
             "rclone/gdrive/token" = {};
             "rclone/gdrive/password" = {};
             "rclone/gdrive/salt" = {};
+            compass_password = {};
+            login_password = {};
+            azure_pat = {};
+            compass_connections = {};
+            open_api_key = {};
+            kubeconfig = {};
+            "nexobility/ssh_private" = {};
+            "nexobility/ssh_public" = {};
           };
         };
       };

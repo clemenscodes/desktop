@@ -30,6 +30,7 @@
         modules = [
           ./configuration.nix
           ./hardware-configuration.nix
+          ./nexobility.nix
           ./secrets.nix
         ];
       };
