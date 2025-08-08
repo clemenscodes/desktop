@@ -7,7 +7,7 @@
   imports = [inputs.cymenixos.nixosModules.${system}.default];
   services = {
     miniupnpd = let
-      interface = "wlp8s0";
+      interface = "wlp7s0";
     in {
       externalInterface = interface;
       internalIPs = [interface];
@@ -46,13 +46,13 @@
       inherit (config.modules.disk) device;
       hibernation = true;
       swapResumeOffset = 533760;
+      secureboot = {
+        enable = true;
+      };
     };
     cpu = {
       enable = true;
-      vendor = "intel";
-      intel = {
-        enable = true;
-      };
+      vendor = "amd";
       msr = {
         enable = true;
       };

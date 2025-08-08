@@ -25,7 +25,7 @@
     inherit (pkgs) lib;
   in {
     nixosConfigurations = {
-      clemens = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit self inputs nixpkgs system;};
         modules = [
           ./configuration.nix
