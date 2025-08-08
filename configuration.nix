@@ -318,7 +318,7 @@
             git = {
               enable = true;
               userName = "Clemens Horn";
-              userEmail = "clemens.horn@mni.thm.de";
+              userEmail = "clemens.horn@nexobility.de";
               signing = {
                 enable = false;
                 gpgFingerprint = "52E30A92E24B09D5";
